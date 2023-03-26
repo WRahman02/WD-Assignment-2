@@ -1,4 +1,5 @@
 import './App.css';
+//import './singCard.js'
 import {useState} from 'react'
 
 const cardImg =[
@@ -27,13 +28,12 @@ function App() {
     <div className="App">
       <h1> Memory Game </h1>
       <button onClick={shuffleCard}>New Game</button>
+      
       <div className='grid'>
-        {cards.map(card =>(
-          <div className='card'key={card.id}>
-            <div>
-              <img className='front' src={card.src} alt = "front"></img>
-              <img className='back' src='/images/back.png'alt = "back"></img>
-            </div>
+        {cards.map(card => (
+          <div>
+            <img className='face' src={card.src} alt = 'face'/>
+            <img className='back' src='/images/back.png' alt = 'back'/>
           </div>
         ))}
       </div>
